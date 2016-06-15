@@ -1,0 +1,142 @@
+$navbar-default-bg: black; /*Change navbar color */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*-----------------------------------------*/
+/*---------------Home Page-----------------*/
+/*-----------------------------------------*/
+
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+  
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+
+.navbar-default {
+  /*background: linear-gradient(to bottom right,rgba(0, 0, 134, 0.9), rgba(40, 56, 229, 0.8));*/
+  /*background: linear-gradient(blue, black); /*2 color gradient*/
+  
+}
+
+#logo {
+  /*padding-top: 30px;*/
+  color: #fff;
+  float: left;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  /*font-family: 'Metrophobic', Arial, serif; font-weight: 400;*/
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url("ScreenShot.png");
+  background-size: cover;
+  height: 750px;
+}
+
+.bgimage {
+  background-image: asset-url('reptiles.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlg {
+  font-size: 1.7em;
+  background-color: Black;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/*------------------------------------------*/
+/*---------------about page-----------------*/
+/*------------------------------------------*/
+
+#aboutcontainer1 {
+  margin-top: -70px;
+}
+
+#about {
+  margin-bottom: 60px;
+}
+
+.bio-title {
+  margin-bottom: 60px;
+}
+
+.bio-section {
+  background-color: #ede6e6;
+  padding: 15px;
+  padding-right: 100px;
+}
+
+/*------------------------------------------*/
+/*---------------Sign Up page-----------------*/
+/*------------------------------------------*/
+
+#signup {
+  background-color: #9fc5f8;
+  height: 600px;
+}
+
+.logotop {
+  margin-left: 100px;
+}
+
+.logobottom {
+  padding-left: 60px;
+  margin-top: -5px;
+  margin-left: 100px;
+}
+
+.signuptitle {
+  margin-bottom: 20px;
+}

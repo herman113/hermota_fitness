@@ -1,0 +1,47 @@
+<div class="container" id="signup">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="logotop">HERMOTA</h1>
+      <h1 class="logobottom">FITNESS</h1>
+    </div>
+  </div>
+  <h1 class="signuptitle" align="center">Create a new user</h1><!--h1-->
+  
+  <div class='row'>
+    <div class='col-xs-12'>
+      
+      <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      
+    <div class="form-group">
+      <div class="control-label col-sm-2">
+        <%= f.label :username %>
+      </div><!--control-label-->
+      <div class="col-sm-8">
+        <%= f.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true %>
+      </div><!--col-->
+    </div><!--form-group-->
+    
+    <div class="form-group">
+      <div class="control-label col-sm-2">
+        <%= f.label :email %>
+      </div><!--control-label-->
+      <div class="col-sm-8">
+        <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+      </div><!--col-->
+    </div><!--form-group-->
+    
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= f.submit "Sign up", class: 'btn btn-primary btn-lg' %>
+      </div><!--col-->
+    </div><!--form-group-->
+    
+      <% end %><!--form_for-->
+      
+      <div class="col-xs-4 col-xs-offset-4">
+        [ <%= link_to "Cancel request and return to home page", root_path %> ]
+      </div>
+      
+    </div><!--col-->
+  </div><!--row-->
+</div><!--container-->
