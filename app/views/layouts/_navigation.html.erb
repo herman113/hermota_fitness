@@ -1,0 +1,142 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  
+  <div class="container-fluid">
+    
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <% if logged_in? %>
+        <%#= link_to "Home", root_path, class: "navbar-brand", id: "logo" %>
+        <%= link_to "Home", member_page_path(current_user), class: "navbar-brand", id: "logo" %>
+      <% else %>
+        <%= link_to "Hermota Fitness", root_path, class: "navbar-brand", id: "logo" %>
+        
+      <% end %>
+      
+    </div><!--nav-header-->
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <% if logged_in? %>
+        <ul class="nav navbar-nav">                     
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Goal Setting<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Core Values", root_path %></li>
+              <li><%= link_to "Goals", about_path %></li>
+              <li><%= link_to "Needs", about_path %></li>
+              <li><%= link_to "Habits", about_path %></li>
+            </ul><!--dropdown-menu-->
+            </li> 
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plan<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Calendar", users_path %></li>
+              </ul><!--dropdown-menu-->
+            </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hard Work<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Training", about_path %></li>
+              <li><%= link_to "Nutrition", nutrition_path %></li>
+              <li><%= link_to "Recovery", about_path %></li>
+              <li><%= link_to "Mindset", about_path %></li>
+              <li><%= link_to "Education", about_path %></li>
+            </ul><!--dropdown-menu-->
+          </li>               <!--habits-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accountability<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Adherence", about_path %></li>
+              <li><%= link_to "Results", about_path %></li>
+              <li><%= link_to "Evaluation", about_path %></li>
+            </ul><!--dropdown-menu-->
+          </li>               <!--member area-->
+             <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support System<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Traing Peers", member_area_path %></li>
+              <li><%= link_to "Coach", about_path %></li>
+              <li><%= link_to "Friends", about_path %></li>
+              <li><%= link_to "Family", about_path %></li>
+              <li><%= link_to "Yourself", about_path %></li>
+            </ul><!--dropdown-menu-->
+                          
+        </ul><!--nav--><!--home,  -->
+        
+      <% else %><!--not logged in-->
+        <ul class="nav navbar-nav"><!--about, our process, member area, services, blogs-->
+          <li><%= link_to "ABOUT", about_path %></li><!--about-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUR PROCESS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "TRAINING", about_path %></li>
+              <li><%= link_to "NUTRITION", nutrition_path %></li>
+              <li><%= link_to "RECOVERY", about_path %></li>
+              <li><%= link_to "MINDSET", about_path %></li>
+              <li><%= link_to "EDUCATION", about_path %></li>
+              <li><%= link_to "RESULTS", about_path %></li>
+            </ul><!--dropdown-menu-->
+          </li>              <!--our proccess-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEMBER AREA<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "USERS", users_path %></li>
+            </ul><!--dropdown-menu-->
+          </li>            <!--member area-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICES<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">PRODUCTS</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">RESOURCES</li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">SOCIAL MEDIA</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul><!--dropdown-menu-->
+          </li>            <!--services-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BLOGS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.hermansoto.com">HERMAN</a></li>
+              <li><a href="http://www.dorotasoto.com">DOROTA</a></li>
+              <li><a href="http://www.hermotafitness.com">HERMOTA</a></li>
+            </ul><!--dropdown-menu-->
+          </li>            <!--blogs-->
+          
+        </ul><!--nav--><!--about, our process, member area, services, blogs-->
+        
+      <% end %>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+          
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <%= "ADMIN" if current_user.admin? %><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "EDIT", edit_user_path(current_user) %></li>
+            <li><%= link_to "VIEW", user_path(current_user) %></li>
+          </ul><!--dropdown-menu-->
+        </li>                                   <!--profile/admin-->
+          <li><%= link_to 'Log out', logout_path, method: :delete %></li> <!--log out-->
+          
+        <% else %><!--not logged in-->
+          <li><%= link_to 'Sign up', signup_path %></li><!--signup-->
+          <li><%= link_to 'Log in', login_path %></li>  <!--login-->
+          
+        <% end %>
+      </ul><!--nav-right-->
+      
+    </div><!-- /.navbar-collapse -->
+    
+  </div><!-- /.container-fluid -->
+  
+</nav>  <!-- Fixed navbar -->
+
+       

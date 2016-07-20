@@ -1,0 +1,70 @@
+<h1 align="center">Edit your account</h1>
+
+<%#= render "shared/errors", obj: @user %>
+
+<div class="row">
+  
+  <div class="col-xs-12">
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %><!--What is an authenticity token?-->
+      
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :username %>
+        </div>  
+        <div class="col-sm-8">
+          <%= f.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true %>
+        </div>
+      </div><!--username-->
+      
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :email %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+        </div>
+      </div><!--email-->
+        
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :password %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+        </div>
+      </div><!--password-->
+  
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit"Update account", class: 'btn btn-primary btn-lg' %>
+          <!--(@user.new_record? ? "Sign up" : )-->
+        </div>
+      </div><!--submit-update-->
+      
+    <% end %>
+    
+  </div><!--col-xs-12-->
+
+</div><!--row for edit users form-->
+    
+<hr><!--seperates form from delete and cancel-->
+    
+<div class="row">
+  
+  <div class="col-xs-12">
+    
+    <h1 align="center">Delete your account</h1>
+    
+    <div class="col-xs-12 center" id="delete-btn">
+     <%= link_to "Delete", user_path(@user), method: :delete,
+                           data: {confirm: "Are you sure you want to delete this user?"},
+                           class: "btn btn-lg btn-danger" %>
+    </div><!--delete user button link-->
+    
+    <div class="col-xs-4 col-xs-offset-4 center">
+      [ <%= link_to "Cancel request and return to users listing", users_path %> ]
+    </div><!--cancel and return to users link-->
+    
+  </div><!--col-xs-12-->
+
+</div><!--row for delete button and cancel link-->
