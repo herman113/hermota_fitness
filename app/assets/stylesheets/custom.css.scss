@@ -208,10 +208,10 @@ footer ul li {
 /*------------------------------------------*/
 
 .bg-image {
-  /*background-image: asset-url("nutrition-weights.jpg");*/
+  background-image: asset-url("nutrition-weights.jpg");
   height: 100vh;
   width: 100vw;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/nutrition-weights.jpg');
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/nutrition-weights.jpg');*/
 }
